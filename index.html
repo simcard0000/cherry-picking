@@ -10,7 +10,7 @@
 		/>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Cherry Picking</title>
-		<link rel="icon" href="">
+		<link rel="icon" href="./assets/logo.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display&family=Outfit&display=swap" rel="stylesheet"> 
@@ -19,12 +19,46 @@
 	</head>
 	<body>
         <div id="mainBox">
-            <img id="cherriesImage" src="./assets/cherries-2.png"/>
-            <div id ="siteContent">
-                <h1><i><b>cherry</b></i> picking</h1>
-                <p>/ˈCHerēˌpikiNG/</p>
+            <img id="cherriesBackground" src="./assets/cherries-2.png"/>
+            <img id="cherriesLogo" src="./assets/logo.png"></img>
+            <div id="siteContent">
+                <h1 class="red"><i><b>cherry</b></i> picking</h1>
+                <p class="subtitle red">/ˈCHerēˌpikiNG/</p>
+                <br>
+                <div id="introSection">
+                    <ul>
+                        <li>choosing or highlighting cases, data, items, etc. that confirm or a agree with a position without considering those that are contradictory; often the root of many logical fallacies</li>
+                        <li>in version control systems like <i>git</i>, the act of selecting commits from a branch and applying them to another - for example, <i>git cherry-pick &ltcommit-hash&gt</i></li>
+                        <li class="red">an ongoing curation of music between friends - a celebration of esoteric sounds, tunes that evoke memories and feelings, and the random songs we discovered along the way</li>
+                    </ul>
+                    <br>
+                    <button id="listenButton" onclick="flowChange('listen')">listen →</button>
+                    <br>
+                    <button id="creditsButton" onclick="flowChange('credits')">credits →</button>
+                </div>
+                <div id="listenSection">
+                    <button id="playlistDropdown" onclick="showDropdown(true)"><!-- text changes depending on state of dropdown --></button>
+                    <br>
+                    <div id="dropdownBox">
+                        <br>
+                        <ol>
+                            <!-- list playlists here -->
+                            <button><li value="1">#001 - (sims) metamorphosis</li></button>
+                        </ol>
+                        <br>
+                    </div>
+                    <div id="playlistSection">
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2tmLf958J0arf60RVi2HSl?utm_source=generator" width="100%" height="300" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                    </div>
+                   <button id="goBackFromListenButton" onclick="flowChange('intro')">go back ←</button>
+                </div>
+                <div id="creditsSection">
+                    <p>Many thanks to</p>
+                    <br>
+                    <button id="goBackFromCreditsButton" onclick="flowChange('intro')">go back ←</button>
+                </div>
             </div>
-
         </div>
     </body>
 </html>
+<script src="/cherry-picking.js"></script> 
