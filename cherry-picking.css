@@ -2,11 +2,15 @@
 html{
 	min-height: 100%;
 	min-width: 100%;
+    overflow: hidden;
 }
 
 body {
     margin: 0;
     padding: 0;
+    min-height: 100%;
+    max-height: 100%;
+    overflow: hidden;
 }
 
 #mainBox {
@@ -14,6 +18,7 @@ body {
 	padding: 0;
 	margin: 0;
     margin-right: 30px;
+    max-height: 100%;
 }
 
 #cherriesLogo {
@@ -33,9 +38,16 @@ body {
     -moz-transform: ScaleX(-1);
 
     /** other styling **/
-    height: 100vh;
-    width: 76vh;
+    min-height: 100vh;
+    max-height: 100vh;
+    width: calc(min(76vh, 100vw));
     margin-right: 25px;
+}
+
+#sectionContents {
+    overflow-wrap: break-word;
+    overflow-y: auto;
+    max-height: calc(100% - 150px);
 }
 
 #dropdownBox {
@@ -76,19 +88,29 @@ button {
     background: none;
 }
 
+button:not(.list):after {
+    content: '';
+	display: block;
+	height: 2px;
+	width: 0px;
+    transition: width 0.5s ease, background 0.5s ease
+}
+
+button:not(.list):hover:after {
+	width: 100%;
+	background: red;
+}
+
 button:hover {
     color: red;
     transition: 0.5s;
 }
 
-button:after {
-    content: '';
-	display: block;
-	height: 2px;
-	width: 0px;
-	transition: width 0.5s ease, background 0.5s ease
+button:is(.list){
+    text-decoration:underline wavy 2px rgba(255, 0, 0, 0);
+    transition: text-decoration-color 0.5s;
 }
-button:hover:after {
-	width: 100%;
-	background: red;
+
+button:is(.list):hover{
+    text-decoration-color: rgba(255, 0, 0, 1);
 }
