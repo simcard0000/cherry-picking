@@ -163,5 +163,8 @@ button:is(.list):hover{
     ul, ol { 
         list-style-position: inside; 
         padding-left: 0;
+    }
+    button {
+        color: red;
     } 
 }
