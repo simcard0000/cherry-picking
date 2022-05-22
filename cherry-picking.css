@@ -131,7 +131,7 @@ button:is(.list):hover{
     text-decoration-color: rgba(255, 0, 0, 1);
 }
 
-@media handheld and (orientation: portrait), (max-aspect-ratio: 1.2), only screen {
+@media only screen and (orientation: portrait), (max-aspect-ratio: 1.2) {
     #mainBox {
         flex-direction: column;
     }
