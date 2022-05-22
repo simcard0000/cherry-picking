@@ -44,6 +44,10 @@ body {
     margin-right: 25px;
 }
 
+#siteContent {
+    width: 100%;
+}
+
 #sectionContents {
     overflow-wrap: break-word;
     overflow-y: auto;
@@ -53,6 +57,14 @@ body {
 #dropdownBox {
     border: 2px dotted red;
     border-radius: 12px;
+    width: calc(100% - 10px);
+}
+
+#playlistIframe {
+    width: calc(100% - 10px);
+    border-radius: 12px;
+    height: 380px;
+
 }
 
 .subtitle {
@@ -72,12 +84,17 @@ h1, button {
 
 h1 {
     font-size: 40px;
+    max-width: calc(100% - 10px);
 }
 
 p, ul, ol, li {
     font-family: 'Outfit', sans-serif;
     margin: 0;
     font-size: 20px;
+}
+
+p, ul, ol {
+    max-width: calc(100% - 10px);
 }
 
 button {
@@ -90,7 +107,7 @@ button {
 button:not(.list):after {
     content: '';
 	display: block;
-	height: 2px;
+	height: 1.5px;
 	width: 0px;
     transition: width 0.5s ease, background 0.5s ease
 }
@@ -112,4 +129,39 @@ button:is(.list){
 
 button:is(.list):hover{
     text-decoration-color: rgba(255, 0, 0, 1);
+}
+
+@media handheld and (orientation: portrait), (max-aspect-ratio: 1.2) {
+    #mainBox {
+        flex-direction: column;
+    }
+    #cherriesBackground {
+        filter: grayscale(300%) brightness(50%) invert(100%);
+        margin-right: 0px;
+    }
+    #cherriesLogo {
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+    #siteContent {
+        position: absolute;
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        width: 80%;
+    }
+    #sectionContents {
+        overflow-y: scroll;
+        max-height: calc(100vh - 200px)
+    }
+    ul, ol { 
+        list-style-position: inside; 
+        padding-left: 0;
+    } 
 }

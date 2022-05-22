@@ -25,7 +25,6 @@ resultsPart.style.display = "none";
 
 // Changing sections:
 function flowChange(text){
-    console.log(text);
     switch(text){
         case 'intro':
             introSection.style.display = "inherit";
@@ -43,7 +42,7 @@ function flowChange(text){
             creditsSection.style.display = "inherit";
             break;
     }
-    console.log(text);
+    return;
 }
 
 const playlists = [
@@ -80,6 +79,7 @@ function showDropdown() {
         dropdown.style.display = "none";
     }
     dropFlag = !dropFlag;
+    return;
 }
 
 function showPlaylist(number) {
@@ -87,7 +87,7 @@ function showPlaylist(number) {
     if (index < 0) {
         console.error("Could not retrieve playlist.");
         resultsPart.style.display = "none";
-        return
+        return;
     } else {
         resultsPart.style.display = "inherit";
         const selection = playlists[index];
@@ -103,12 +103,13 @@ function showPlaylist(number) {
             const oldTracklist = document.getElementById("tracklistText");
             oldTracklist.remove();
         }
+        showDropdown();
         let htmlPlaylistContent = [];
         let htmlTracklistContent = [];
         resultsPart.insertAdjacentHTML("afterbegin", "<div id=\"playlistBlurb\"><br><p><i>" + selection.blurb +"</i></p><br></div>")
         // the Spotify playlist embed
-        htmlPlaylistContent.push("<iframe id=\"playlistIframe\" style=\"border-radius:12px\" src=\"" + selection.link + 
-            "\" width=\"100%\" height=\"380\" frameBorder=\"0\" allowfullscreen=\"\"" + 
+        htmlPlaylistContent.push("<iframe id=\"playlistIframe\" src=\"" + selection.link + 
+            "\" frameBorder=\"0\" allowfullscreen=\"\"" + 
             "allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\"></iframe>");
         playlistComponent.insertAdjacentHTML(
              "afterbegin",
@@ -123,6 +124,7 @@ function showPlaylist(number) {
         tracklistComponent.insertAdjacentHTML(
             "afterbegin",
             htmlTracklistContent.join('')
-        )
+        );
+        return;
     }
 }
