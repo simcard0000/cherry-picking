@@ -226,10 +226,6 @@ function changeImage() {
 }
 
 function mediaQueryChange(mq) {
-    window.addEventListener("scroll", (e) => {
-        e.preventDefault();
-        window.scrollTo(0, 0);
-    });
     if (mq.matches && (imageIndex == 1 || imageIndex == 2 || imageIndex == 3 || imageIndex == 4)) {
         siteImage.style.marginRight = "0px";
         siteImage.style.marginLeft = "0px";
@@ -252,3 +248,7 @@ function mediaQueryChange(mq) {
 }
 
 mediaQuery.addEventListener('change', mediaQueryChange);
+window.addEventListener("scroll", (e) => {
+    e.preventDefault();
+    window.scrollTo(0, 0);
+});

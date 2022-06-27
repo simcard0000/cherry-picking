@@ -3,6 +3,7 @@ html{
 	min-height: 100%;
 	min-width: 100%;
     overflow-y: hidden;
+    overscroll-behavior: none;
 }
 
 body {
@@ -11,6 +12,7 @@ body {
     min-height: 100%;
     max-height: 100%;
     overflow-y: hidden;
+    overscroll-behavior: none;
 }
 
 #mainBox {
@@ -58,6 +60,7 @@ body {
     overflow-wrap: break-word;
     overflow-y: auto;
     max-height: calc(100vh - 150px);
+    overscroll-behavior: none;
 }
 
 #dropdownBox {
@@ -175,8 +178,10 @@ button:is(.list):hover{
     }
     #sectionContents {
         overflow-y: scroll;
-        padding-bottom: 50px;
-        max-height: calc(100vh - 200px)
+        max-height: calc(100vh - 200px);
+        padding-bottom: none;
+        overscroll-behavior: none;
+
     }
     ul, ol { 
         list-style-position: inside; 
