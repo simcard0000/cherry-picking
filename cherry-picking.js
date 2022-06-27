@@ -17,11 +17,29 @@ var playlistComponent = document.getElementById("playlistComponent");
 var tracklistComponent = document.getElementById("tracklistComponent");
 var dropFlag = false;
 
+// Media query for mobile/narrow screens:
+var mediaQuery = window.matchMedia("only screen and (orientation: portrait), (max-aspect-ratio: 1.2)");
+var imageIndex = 0;
+
+// Site image:
+var siteImage = document.getElementById("cherriesBackground");
+
 //Initial section/text settings:
 introSection.style.display = "inherit";
 listenSection.style.display = "none";
 creditsSection.style.display = "none";
 resultsPart.style.display = "none";
+
+// Background audio:
+var siteTheme = document.getElementById("backgroundAudio");
+
+const images = [
+    "./assets/cherries-2.png", // 0
+    "./assets/cherry-dessert.gif", // 1
+    "./assets/dither_it_cherry-pepsi.png", // 2 
+    "./assets/cherry-sparkle.gif", // 3
+    "./assets/cherry-cola-casettes.jpg" // 4
+]
 
 // Changing sections:
 function flowChange(text){
@@ -50,6 +68,7 @@ const playlists = [
         "name": "#001 - (sims) metamorphosis",
         "link": "https://open.spotify.com/embed/playlist/2tmLf958J0arf60RVi2HSl?utm_source=generator",
         "blurb": "there's some saying by ursula le guin; that what goes too long unchanged destroys itself. the forest is forever because it dies and dies and so lives. and so i change. people change. we all grow and burn.",
+        "date": "March 14, 2022",
         "songs": [
             "Dawn FM - The Weeknd",
             "Face Your Fear - Curtis Harding",
@@ -106,7 +125,7 @@ function showPlaylist(number) {
         showDropdown();
         let htmlPlaylistContent = [];
         let htmlTracklistContent = [];
-        resultsPart.insertAdjacentHTML("afterbegin", "<div id=\"playlistBlurb\"><br><p><i>" + selection.blurb +"</i></p><br></div>")
+        resultsPart.insertAdjacentHTML("afterbegin", "<div id=\"playlistBlurb\"><br><p><i>" + selection.blurb + "</i> (" + selection.date + ")</p><br></div>")
         // the Spotify playlist embed
         htmlPlaylistContent.push("<iframe id=\"playlistIframe\" src=\"" + selection.link + 
             "\" frameBorder=\"0\" allowfullscreen=\"\"" + 
@@ -125,6 +144,107 @@ function showPlaylist(number) {
             "afterbegin",
             htmlTracklistContent.join('')
         );
+        backgroundAudio.pause();
+        backgroundAudio.currentTime = 0;
         return;
     }
 }
+
+function changeImage() {
+    let randomIndex = imageIndex;
+    while (randomIndex == imageIndex) {
+        randomIndex = Math.floor(Math.random() * 5);
+    }
+    if (randomIndex == 0) {
+        // re-applying flip:
+        siteImage.style.WebkitTransform = "scaleX(-1)";
+        siteImage.style.transform = "scaleX(-1)";
+        siteImage.style.OTransform = "scaleX(-1)";
+        siteImage.style.msTransform = "scaleX(-1)";
+        siteImage.style.MozTransform = "scaleX(-1)";
+        // other styling:
+        siteImage.style.width = "calc(min(76vh, 100vw))";
+        siteImage.style.marginRight = "25px";
+        siteImage.style.marginLeft = "0px";
+    } else if (randomIndex == 1) {
+        // removing flip:
+        siteImage.style.WebkitTransform = "none";
+        siteImage.style.transform = "none";
+        siteImage.style.OTransform = "none";
+        siteImage.style.msTransform = "none";
+        siteImage.style.MozTransform = "none";
+        // other styling:
+        siteImage.style.width = "calc(min(76vh, 100vw) + 75px)";
+        siteImage.style.marginRight = "25px";
+        siteImage.style.marginLeft = "-75px";
+    } else if (randomIndex == 2) {
+        // removing flip:
+        siteImage.style.WebkitTransform = "none";
+        siteImage.style.transform = "none";
+        siteImage.style.OTransform = "none";
+        siteImage.style.msTransform = "none";
+        siteImage.style.MozTransform = "none";
+        // other styling:
+        siteImage.style.width = "calc(min(76vh, 100vw) + 75px)";
+        siteImage.style.marginRight = "25px";
+        siteImage.style.marginLeft = "-75px";
+        if (mediaQuery.matches) {
+            siteImage.style.marginRight = "0px";
+            siteImage.style.marginLeft = "0px";
+            siteImage.style.width = "100vw";      
+        }
+    } else if (randomIndex == 3) {
+        // re-applying flip:
+        siteImage.style.WebkitTransform = "scaleX(-1)";
+        siteImage.style.transform = "scaleX(-1)";
+        siteImage.style.OTransform = "scaleX(-1)";
+        siteImage.style.msTransform = "scaleX(-1)";
+        siteImage.style.MozTransform = "scaleX(-1)";
+        // other styling:
+        siteImage.style.width = "calc(min(76vh, 100vw) + 50px)";
+        siteImage.style.marginRight = "25px";
+        siteImage.style.marginLeft = "-50px";
+        if (mediaQuery.matches) {
+            siteImage.style.marginRight = "0px";
+            siteImage.style.marginLeft = "0px";
+            siteImage.style.width = "100vw";     
+        }
+    } else if (randomIndex == 4) {
+        // removing flip:
+        siteImage.style.WebkitTransform = "none";
+        siteImage.style.transform = "none";
+        siteImage.style.OTransform = "none";
+        siteImage.style.msTransform = "none";
+        siteImage.style.MozTransform = "none";
+        // other styling:
+        siteImage.style.width = "calc(min(76vh, 100vw))";
+        siteImage.style.marginRight = "25px";
+        siteImage.style.marginLeft = "0px";
+    }
+    siteImage.src = images[randomIndex];
+    imageIndex = randomIndex;
+}
+
+function mediaQueryChange(mq) {
+    if (mq.matches && (imageIndex == 1 || imageIndex == 2 || imageIndex == 3 || imageIndex == 4)) {
+        siteImage.style.marginRight = "0px";
+        siteImage.style.marginLeft = "0px";
+        siteImage.style.width = "100vw";    
+    } else {
+        if (imageIndex == 1 || imageIndex == 2) {
+            siteImage.style.width = "calc(min(76vh, 100vw) + 75px)";
+            siteImage.style.marginRight = "25px";
+            siteImage.style.marginLeft = "-75px";
+        } else if (imageIndex == 3) {
+            siteImage.style.width = "calc(min(76vh, 100vw) + 50px)";
+            siteImage.style.marginRight = "25px";
+            siteImage.style.marginLeft = "-50px";
+        } else {
+            siteImage.style.width = "calc(min(76vh, 100vw))";
+            siteImage.style.marginRight = "25px";
+            siteImage.style.marginLeft = "0px";
+        }
+    }
+}
+
+mediaQuery.addEventListener('change', mediaQueryChange);

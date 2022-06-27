@@ -19,8 +19,11 @@
 	</head>
 	<body>
         <div id="mainBox">
+            <audio id="backgroundAudio" loop autoplay>
+                <source src="./assets/S.W.A.K.mp3" type="audio/mp3">
+            </audio>
             <img id="cherriesBackground" src="./assets/cherries-2.png"/>
-            <img id="cherriesLogo" src="./assets/logo.png"></img>
+            <img id="cherriesLogo" src="./assets/logo.png" onclick="changeImage()"/>
             <div id="siteContent">
                 <h1 class="red"><i><b>cherry</b></i> picking</h1>
                 <p class="subtitle red">/ˈCHerēˌpikiNG/</p>
@@ -74,6 +77,14 @@
                     <div id="creditsSection">
                         <p>Many thanks and much love to all the playlist contributors and people who stay a while and listen to our stories.</p>
                         <br>
+                        <p class="red">theme song + assets:</p>
+                        <p>The default song playing in the background is S.W.A.K. by Luxury Elite, which has a Creative Commons 
+                            <a class="red" href="https://creativecommons.org/licenses/by-nc/3.0/">Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)</a> 
+                            license, and can be accessed <a class="red" href="https://crashsymbols.bandcamp.com/track/s-w-a-k">here</a>. The song
+                            stops once a playlist is opened. Information about images used in the site can be found in this
+                            <a class="red" href="https://github.com/simcard0000/cherry-picking">repository</a>.
+                        </p>
+                        <br>
                         <p class="red">privacy policy + end user agreement:</p>
                         <p>Because Spotify playlists are embedded on this site, per Spotify's legalese we need to talk about information use and whatnot.</p>
                         <br>
@@ -100,6 +111,7 @@
                         <button id="goBackFromCreditsButton" onclick="flowChange('intro')">go back ←</button>
                     </div>
                     <br>
+                <br>
                 </div>
             </div>
         </div>

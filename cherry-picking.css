@@ -27,15 +27,21 @@ body {
     left: 15px;
     height: 45px;
     width: 45px;
+    cursor: pointer;
+}
+
+#cherriesLogo:hover {
+    transform: rotate(1turn);
+    transition: transform 2s;
 }
 
 #cherriesBackground {
     /** flipping the image **/
     -webkit-transform: scaleX(-1);
-    transform: ScaleX(-1);
+    transform: scaleX(-1);
     -o-transform: scaleX(-1);
-    -ms-transform: ScaleX(-1);
-    -moz-transform: ScaleX(-1);
+    -ms-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
 
     /** other styling **/
     min-height: 100vh;
@@ -58,6 +64,10 @@ body {
     border: 2px dotted red;
     border-radius: 12px;
     width: calc(100% - 10px);
+}
+#playlistComponent {
+    background: url(./assets/cherry.gif) no-repeat;
+    background-size: 10%;
 }
 
 #playlistIframe {
@@ -120,6 +130,7 @@ button:not(.list):hover:after {
 button:hover {
     color: red;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 button:is(.list){
