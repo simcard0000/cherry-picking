@@ -175,6 +175,7 @@ button:is(.list):hover{
     }
     #sectionContents {
         overflow-y: scroll;
+        padding-bottom: 50px;
         max-height: calc(100vh - 200px)
     }
     ul, ol { 
