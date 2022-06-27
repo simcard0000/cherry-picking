@@ -179,7 +179,7 @@ button:is(.list):hover{
     #sectionContents {
         overflow-y: scroll;
         max-height: calc(100vh - 200px);
-        padding-bottom: none;
+        padding-bottom: 30px;
         overscroll-behavior: none;
 
     }
