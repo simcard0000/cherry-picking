@@ -6,6 +6,7 @@
 🍒 Welcome to the best music curation on the internet. 
 
 ### What's this all about now?
+A music blog between my friends and I. More information + updated website coming soon.
 
 ### Credits 
 Logo designs were made with [Figma](https://www.figma.com).
