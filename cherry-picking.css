@@ -60,7 +60,10 @@ body {
     overflow-wrap: break-word;
     overflow-y: auto;
     max-height: calc(100vh - 150px);
-    overscroll-behavior: none;
+}
+
+#buffer {
+    display: none;
 }
 
 #dropdownBox {
@@ -179,9 +182,10 @@ button:is(.list):hover{
     #sectionContents {
         overflow-y: scroll;
         max-height: calc(100vh - 200px);
-        padding-bottom: 100px;
-        overscroll-behavior: none;
-
+    }
+    #buffer {
+        display: inherit;
+        height: 100px;
     }
     ul, ol { 
         list-style-position: inside; 

@@ -20,6 +20,7 @@ var dropFlag = false;
 // Media query for mobile/narrow screens:
 var mediaQuery = window.matchMedia("only screen and (orientation: portrait), (max-aspect-ratio: 1.2)");
 var imageIndex = 0;
+var buffer = document.getElementById("buffer");
 
 // Site image:
 var siteImage = document.getElementById("cherriesBackground");
@@ -226,6 +227,8 @@ function changeImage() {
 }
 
 function mediaQueryChange(mq) {
+    buffer.style.display = "inherit";
+    buffer.style.height = "100px";
     if (mq.matches && (imageIndex == 1 || imageIndex == 2 || imageIndex == 3 || imageIndex == 4)) {
         siteImage.style.marginRight = "0px";
         siteImage.style.marginLeft = "0px";
