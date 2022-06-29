@@ -160,74 +160,74 @@ function changeImage() {
     tempImg.src = images[randomIndex];
     tempImg.onload = function() {
         siteImage.src = tempImg.src;
+        if (randomIndex == 0) {
+            // re-applying flip:
+            siteImage.style.WebkitTransform = "scaleX(-1)";
+            siteImage.style.transform = "scaleX(-1)";
+            siteImage.style.OTransform = "scaleX(-1)";
+            siteImage.style.msTransform = "scaleX(-1)";
+            siteImage.style.MozTransform = "scaleX(-1)";
+            // other styling:
+            siteImage.style.width = "calc(min(76vh, 100vw))";
+            siteImage.style.marginRight = "25px";
+            siteImage.style.marginLeft = "0px";
+        } else if (randomIndex == 1) {
+            // removing flip:
+            siteImage.style.WebkitTransform = "none";
+            siteImage.style.transform = "none";
+            siteImage.style.OTransform = "none";
+            siteImage.style.msTransform = "none";
+            siteImage.style.MozTransform = "none";
+            // other styling:
+            siteImage.style.width = "calc(min(76vh, 100vw) + 75px)";
+            siteImage.style.marginRight = "25px";
+            siteImage.style.marginLeft = "-75px";
+        } else if (randomIndex == 2) {
+            // removing flip:
+            siteImage.style.WebkitTransform = "none";
+            siteImage.style.transform = "none";
+            siteImage.style.OTransform = "none";
+            siteImage.style.msTransform = "none";
+            siteImage.style.MozTransform = "none";
+            // other styling:
+            siteImage.style.width = "calc(min(76vh, 100vw) + 75px)";
+            siteImage.style.marginRight = "25px";
+            siteImage.style.marginLeft = "-75px";
+            if (mediaQuery.matches) {
+                siteImage.style.marginRight = "0px";
+                siteImage.style.marginLeft = "0px";
+                siteImage.style.width = "100vw";      
+            }
+        } else if (randomIndex == 3) {
+            // re-applying flip:
+            siteImage.style.WebkitTransform = "scaleX(-1)";
+            siteImage.style.transform = "scaleX(-1)";
+            siteImage.style.OTransform = "scaleX(-1)";
+            siteImage.style.msTransform = "scaleX(-1)";
+            siteImage.style.MozTransform = "scaleX(-1)";
+            // other styling:
+            siteImage.style.width = "calc(min(76vh, 100vw) + 50px)";
+            siteImage.style.marginRight = "25px";
+            siteImage.style.marginLeft = "-50px";
+            if (mediaQuery.matches) {
+                siteImage.style.marginRight = "0px";
+                siteImage.style.marginLeft = "0px";
+                siteImage.style.width = "100vw";     
+            }
+        } else if (randomIndex == 4) {
+            // removing flip:
+            siteImage.style.WebkitTransform = "none";
+            siteImage.style.transform = "none";
+            siteImage.style.OTransform = "none";
+            siteImage.style.msTransform = "none";
+            siteImage.style.MozTransform = "none";
+            // other styling:
+            siteImage.style.width = "calc(min(76vh, 100vw))";
+            siteImage.style.marginRight = "25px";
+            siteImage.style.marginLeft = "0px";
+        }
     }
     imageIndex = randomIndex;
-    if (randomIndex == 0) {
-        // re-applying flip:
-        siteImage.style.WebkitTransform = "scaleX(-1)";
-        siteImage.style.transform = "scaleX(-1)";
-        siteImage.style.OTransform = "scaleX(-1)";
-        siteImage.style.msTransform = "scaleX(-1)";
-        siteImage.style.MozTransform = "scaleX(-1)";
-        // other styling:
-        siteImage.style.width = "calc(min(76vh, 100vw))";
-        siteImage.style.marginRight = "25px";
-        siteImage.style.marginLeft = "0px";
-    } else if (randomIndex == 1) {
-        // removing flip:
-        siteImage.style.WebkitTransform = "none";
-        siteImage.style.transform = "none";
-        siteImage.style.OTransform = "none";
-        siteImage.style.msTransform = "none";
-        siteImage.style.MozTransform = "none";
-        // other styling:
-        siteImage.style.width = "calc(min(76vh, 100vw) + 75px)";
-        siteImage.style.marginRight = "25px";
-        siteImage.style.marginLeft = "-75px";
-    } else if (randomIndex == 2) {
-        // removing flip:
-        siteImage.style.WebkitTransform = "none";
-        siteImage.style.transform = "none";
-        siteImage.style.OTransform = "none";
-        siteImage.style.msTransform = "none";
-        siteImage.style.MozTransform = "none";
-        // other styling:
-        siteImage.style.width = "calc(min(76vh, 100vw) + 75px)";
-        siteImage.style.marginRight = "25px";
-        siteImage.style.marginLeft = "-75px";
-        if (mediaQuery.matches) {
-            siteImage.style.marginRight = "0px";
-            siteImage.style.marginLeft = "0px";
-            siteImage.style.width = "100vw";      
-        }
-    } else if (randomIndex == 3) {
-        // re-applying flip:
-        siteImage.style.WebkitTransform = "scaleX(-1)";
-        siteImage.style.transform = "scaleX(-1)";
-        siteImage.style.OTransform = "scaleX(-1)";
-        siteImage.style.msTransform = "scaleX(-1)";
-        siteImage.style.MozTransform = "scaleX(-1)";
-        // other styling:
-        siteImage.style.width = "calc(min(76vh, 100vw) + 50px)";
-        siteImage.style.marginRight = "25px";
-        siteImage.style.marginLeft = "-50px";
-        if (mediaQuery.matches) {
-            siteImage.style.marginRight = "0px";
-            siteImage.style.marginLeft = "0px";
-            siteImage.style.width = "100vw";     
-        }
-    } else if (randomIndex == 4) {
-        // removing flip:
-        siteImage.style.WebkitTransform = "none";
-        siteImage.style.transform = "none";
-        siteImage.style.OTransform = "none";
-        siteImage.style.msTransform = "none";
-        siteImage.style.MozTransform = "none";
-        // other styling:
-        siteImage.style.width = "calc(min(76vh, 100vw))";
-        siteImage.style.marginRight = "25px";
-        siteImage.style.marginLeft = "0px";
-    }
 }
 
 function mediaQueryChange(mq) {
