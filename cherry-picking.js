@@ -156,7 +156,11 @@ function changeImage() {
     while (randomIndex == imageIndex) {
         randomIndex = Math.floor(Math.random() * 5);
     }
-    siteImage.src = images[randomIndex];
+    var tempImg = new Image();
+    tempImg.src = images[randomIndex];
+    tempImg.onload = function() {
+        siteImage.src = tempImg.src;
+    }
     imageIndex = randomIndex;
     if (randomIndex == 0) {
         // re-applying flip:
