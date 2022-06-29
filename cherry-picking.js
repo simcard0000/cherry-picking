@@ -156,6 +156,8 @@ function changeImage() {
     while (randomIndex == imageIndex) {
         randomIndex = Math.floor(Math.random() * 5);
     }
+    siteImage.src = images[randomIndex];
+    imageIndex = randomIndex;
     if (randomIndex == 0) {
         // re-applying flip:
         siteImage.style.WebkitTransform = "scaleX(-1)";
@@ -222,8 +224,6 @@ function changeImage() {
         siteImage.style.marginRight = "25px";
         siteImage.style.marginLeft = "0px";
     }
-    siteImage.src = images[randomIndex];
-    imageIndex = randomIndex;
 }
 
 function mediaQueryChange(mq) {
