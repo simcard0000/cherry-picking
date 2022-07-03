@@ -12,4 +12,5 @@ A music blog between my friends and I. More information + updated website coming
 Logo designs were made with [Figma](https://www.figma.com). The fonts used on the site are [Noto Serif Display](https://fonts.google.com/noto/specimen/Noto+Serif+Display) and [Outfit](https://fonts.google.com/specimen/Outfit). The theme song of the site is [S.W.A.K. by Luxury Elite](https://crashsymbols.bandcamp.com/track/s-w-a-k), which has a Creative Commons [Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)](https://creativecommons.org/licenses/by-nc/3.0/) license. The art pieces used in the site are as follows: note that the theme and images used do not imply endorsement by the artists and are used in good faith; if you don't want your art involved let me know!
 
 #### Assets
-* 
+* [Ciliegia acquajuola. [Cerasus ; Ciliegio acquaiolo ; Cherries] (1817-1839) - Giorgio Gallesio (Italian, 1772-1839)](https://artvee.com/dl/ciliegia-acquajuola-cerasus-ciliegio-acquaiolo-cherries/)
+
