@@ -131,7 +131,7 @@ function showPlaylist(number) {
         resultsPart.insertAdjacentHTML("afterbegin", "<div id=\"playlistBlurb\"><br><p><i>" + selection.blurb + "</i> (" + selection.date + ")</p><br></div>")
         // the Spotify playlist embed
         htmlPlaylistContent.push("<iframe id=\"playlistIframe\" src=\"" + selection.link + 
-            "\" frameBorder=\"0\" allowfullscreen=\"\"" + 
+            "\" frameBorder=\"0\" allowfullscreen=\"\" onload=\"removeBackgroundGif()\"" + 
             "allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\"></iframe>");
         playlistComponent.insertAdjacentHTML(
              "afterbegin",
@@ -149,9 +149,13 @@ function showPlaylist(number) {
         );
         backgroundAudio.pause();
         backgroundAudio.currentTime = 0;
-        document.getElementById("playlistIframe").onload(() => playlistComponent.style.background = "none");
         return;
     }
+}
+
+function removeBackgroundGif() {
+    playlistComponent.style.background = "none";
+    return;
 }
 
 function changeImage() {
