@@ -103,6 +103,8 @@ function showDropdown() {
 }
 
 function showPlaylist(number) {
+    playlistComponent.style.background = "url(./assets/cherry.gif) no-repeat";
+    playlistComponent.style.backgroundSize = "10%";
     const index = number - 1;
     if (index < 0) {
         console.error("Could not retrieve playlist.");
@@ -147,6 +149,7 @@ function showPlaylist(number) {
         );
         backgroundAudio.pause();
         backgroundAudio.currentTime = 0;
+        document.getElementById("playlistIframe").onload(() => playlistComponent.style.background = "none");
         return;
     }
 }

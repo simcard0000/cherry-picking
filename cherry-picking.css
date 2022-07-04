@@ -155,6 +155,12 @@ button:is(.list):hover{
 }
 
 @media only screen and (orientation: portrait), (max-aspect-ratio: 1.2) {
+    h1 {
+        font-size: 25px;
+    }
+    .subtitle {
+        font-size: 15px;
+    }
     #mainBox {
         flex-direction: column;
     }
