@@ -90,7 +90,7 @@ const playlists = [
     },
     {
         "name": "#002 - (many people) a little song survey",
-        "link": "https://open.spotify.com/playlist/1OvaO6H6lNR7iba73eXbxp?si=fb12faeb070649a4",
+        "link": "https://open.spotify.com/embed/playlist/1OvaO6H6lNR7iba73eXbxp?utm_source=generator",
         "blurb": "at a party I asked people to give me three of their favourite songs - these are the results, a mix of new and old goodies",
         "date": "November 27, 2022",
         "songs": [
