@@ -87,6 +87,29 @@ const playlists = [
             "Little Dark Age - MGMT",
             "0.00 - Childish Gambino"
         ]
+    },
+    {
+        "name": "#002 - (many people) a little song survey",
+        "link": "https://open.spotify.com/playlist/1OvaO6H6lNR7iba73eXbxp?si=fb12faeb070649a4",
+        "blurb": "at a party I asked people to give me three of their favourite songs - these are the results, a mix of new and old goodies",
+        "date": "November 27, 2022",
+        "songs": [
+            "Fireflies - Owl City",
+            "Rasputin - Boney M.",
+            "Mr. Blue Sky - Electric Light Orchestra",
+            "I Bet You Look Good On The Dancefloor - Arctic Monkeys",
+            "Space Song - Beach House",
+            "Interstate Love Song - Stone Temple Pilots",
+            "I Don't Wanna Be Me - Type O Negative",
+            "My Demons - STARSET",
+            "Changes - David Bowie",
+            "Don't Stop Believin' - Journey",
+            "Fallen Fruit - Lorde",
+            "I'm Still Standing - Elton John",
+            "Out of Time - The Weeknd",
+            "Oh No! - MARINA",
+            "(Don't Fear) The Reaper - Blue Öyster Cult"
+        ]
     }
 ]
 
