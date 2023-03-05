@@ -17,4 +17,4 @@ Logo designs were made with [Figma](https://www.figma.com). The fonts used on th
 * [anime-style flan with cherry](https://weheartit.com/entry/257311915)
 * [Sony Walkman with Cherry Coke](https://www.pinterest.cl/pin/534872893246892770/)
 * [taking a cherry out of a drink](https://60s-heartshaped-chevrolet.tumblr.com/post/612908843859673088)
-
+* [spinning cherry - Valentines Day Valentine Sticker by Strudelbee via Giphy](https://media.giphy.com/media/4XKDjbJ99pDxdFileQ/giphy.gif)
