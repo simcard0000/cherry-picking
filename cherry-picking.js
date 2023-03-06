@@ -91,7 +91,7 @@ const playlists = [
     {
         "name": "#002 - (many people) a little song survey",
         "link": "https://open.spotify.com/embed/playlist/1OvaO6H6lNR7iba73eXbxp?utm_source=generator",
-        "blurb": "at a party I asked people to give me three of their favourite songs - these are the results, a mix of new and old goodies",
+        "blurb": "at a party I asked people to give me three of their favourite songs - these are the results, a mix of new and old goodies.",
         "date": "November 27, 2022",
         "songs": [
             "Fireflies - Owl City",
@@ -109,6 +109,29 @@ const playlists = [
             "Out of Time - The Weeknd",
             "Oh No! - MARINA",
             "(Don't Fear) The Reaper - Blue Öyster Cult"
+        ]
+    },
+    {
+        "name": "#003 - (sims) piano interludes",
+        "link": "https://open.spotify.com/embed/playlist/31yyWlAlkT6hJqVG9ra8mE?utm_source=generator&theme=0",
+        "blurb": "windows into other worlds, honest reflections, exegesis by the artists...things to listen to at 3 a.m.",
+        "date": "March 6, 2023",
+        "songs": [
+            "Sometimes... - Tyler, The Creator",
+            "Yebba's Heartbreak - Drake, Yebba",
+            "Golden - Fall Out Boy",
+            "A Gathering on 57th - The Paper Kites",
+            "Talk Of The Town - Jack Harlow",
+            "A Word of Wisdom - M83",
+            "SUGA's Interlude - Halsey, SUGA, BTS",
+            "i don't wanna fall in love, it's too late now - Chase Shakur",
+            "All Night Parking (with Erroll Garner) Interlude - Adele",
+            "Thugger's Interlude - 6LACK",
+            "Mild Escape - Miso",
+            "YUKON (Interlude) - Joji",
+            "Rich - Interlude - Kendrick Lamar",
+            "ICU (Madison's Lullabye) - Demi Lovato",
+            "Not to see you again. - HEIZE"
         ]
     }
 ]
