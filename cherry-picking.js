@@ -114,7 +114,7 @@ const playlists = [
     {
         "name": "#003 - (sims) piano interludes",
         "link": "https://open.spotify.com/embed/playlist/31yyWlAlkT6hJqVG9ra8mE?utm_source=generator&theme=0",
-        "blurb": "windows into other worlds, honest reflections, exegesis by the artists...things to listen to at 3 a.m.",
+        "blurb": "windows into other worlds, mirrors into the soul, snapshots of feelings...things to listen to at 3 a.m.",
         "date": "March 6, 2023",
         "songs": [
             "Sometimes... - Tyler, The Creator",
