@@ -1,5 +1,6 @@
 ![active development](https://img.shields.io/badge/active%20dev-yes-brightgreen.svg)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/simcard0000/cherry-picking.svg)
+[![W3C Validation - https://validator.nu/](https://img.shields.io/w3c-validation/default?targetUrl=https%3A%2F%2Fcherrypicking.digital%2F&label=w3c%20check)](https://validator.nu/?doc=https%3A%2F%2Fcherrypicking.digital%2F)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/1465b280-f01c-46bc-87cc-e11878b6f884/deploy-status)](https://app.netlify.com/sites/stellar-praline-1efd05/deploys)
 # cherry-picking
 <img alt="cherry-picking icon" src="https://github.com/simcard0000/cherry-picking/blob/main/assets/logo.png" width="100" height="100">
