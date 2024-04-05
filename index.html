@@ -2,38 +2,37 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<meta charset="utf-8" />
-		<meta name="author" content="Simran Thind" />
-		<meta
-			name="description"
-			content="Welcome to the best music curation on the internet."
-		/>
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <noscript>
+            <style>
+                #sectionContents {
+                    display: none;
+                }
+            </style>
+        </noscript>
+		<meta charset="utf-8">
+		<meta name="author" content="Simran Thind">
+		<meta name="description" content="Welcome to the best music curation on the internet.">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Cherry Picking</title>
 		<link rel="icon" href="./assets/logo.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display&family=Outfit&display=swap" rel="stylesheet"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="cherry-picking.css" />
+        <link  rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display&family=Outfit&display=swap"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="cherry-picking.css">
 	</head>
 	<body>
         <div id="mainBox">
             <audio id="backgroundAudio" loop autoplay>
                 <source src="./assets/S.W.A.K.mp3" type="audio/mp3">
             </audio>
-            <img id="cherriesBackground" src="./assets/cherries-2.png"/>
-            <img id="cherriesLogo" src="./assets/logo.png" onclick="changeImage()"/>
+            <img id="cherriesBackground" src="./assets/cherries-2.png" alt="Background image with a cherry.">
+            <img id="cherriesLogo" src="./assets/logo.png" onclick="changeImage()" alt="Cherry Picking logo.">
             <div id="siteContent">
                 <h1 class="red"><i><b>cherry</b></i> picking</h1>
                 <p class="subtitle red">/ˈCHerēˌpikiNG/</p>
                 <br>
                 <noscript>
-                    <style type="text/css">
-                        #sectionContents {
-                            display: none;
-                        }
-                    </style>
                     <div id="noscriptContent">
                         <p>This site needs JavaScript to run. Please enable running scripts for this website in your browser.</p>
                     </div>
@@ -42,7 +41,7 @@
                     <div id="introSection">
                         <ul>
                             <li>choosing or highlighting cases, data, items, etc. that confirm or agree with a position without considering those that are contradictory; often the root of many logical fallacies</li>
-                            <li>in version control systems like <i>git</i>, the act of selecting commits from a branch and applying them to another - for example, <i>git cherry-pick &ltcommit-hash&gt</i></li>
+                            <li>in version control systems like <i>git</i>, the act of selecting commits from a branch and applying them to another - for example, <i>git cherry-pick &lt;commit-hash&gt;</i></li>
                             <li class="red">an ongoing curation of music between friends - a celebration of esoteric sounds, tunes that evoke memories and feelings, and the random songs we discovered along the way</li>
                         </ul>
                         <br>
@@ -57,9 +56,9 @@
                             <br>
                             <ul>
                                 <!-- list playlists here -->
-                                <li value="1"><button class="list" onclick="showPlaylist(1)">#001 - (sims) metamorphosis</button></li>
-                                <li value="2"><button class="list" onclick="showPlaylist(2)">#002 - (many people) a little song survey</button></li>
-                                <li value="3"><button class="list" onclick="showPlaylist(3)">#003 - (sims) piano interludes</button></li>
+                                <li><button class="list" onclick="showPlaylist(1)">#001 - (sims) metamorphosis</button></li>
+                                <li><button class="list" onclick="showPlaylist(2)">#002 - (many people) a little song survey</button></li>
+                                <li><button class="list" onclick="showPlaylist(3)">#003 - (sims) piano interludes</button></li>
                             </ul>
                             <br>
                         </div>
@@ -116,6 +115,6 @@
                 </div>
             </div>
         </div>
+        <script src="/cherry-picking.js"></script> 
     </body>
 </html>
-<script src="/cherry-picking.js"></script> 
